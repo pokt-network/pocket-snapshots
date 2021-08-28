@@ -53,7 +53,7 @@ You can build/run the docker image, which will download/untar the pocket blockch
 
 
 ```bash
-docker build -t pocket-blockchain-downloader . --no-cache && docker run -v /node1/:/root/node1  -it pocket-blockchain-downloader  
+docker build -t pocket-blockchain-downloader . --no-cache && docker run -v  $(pwd)/node1/:/root/node1  -it pocket-blockchain-downloader
 ``` 
 
 
