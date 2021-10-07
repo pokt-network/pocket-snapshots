@@ -16,7 +16,7 @@ Below are the mechanisms in order to download a snapshot of our datadir using st
 
 #### Download via direct link
 
-Download snapshot from [this link](https://link.us1.storjshare.io/s/jwykucosy4lbitjok6sfq5nw62tq/pocket-public-blockchains/pocket-network-data-0007-rc-0.6.3.6.tar)
+Download snapshot from [this link](https://link.us1.storjshare.io/s/jxggkcdnf4ot4v44sxjxso6jz7oq/pocket-public-blockchains/pocket-network-data-1207-rc-0.6.3.6.tar)
 
 Extract snapshot inside pocket network config data folder
 
