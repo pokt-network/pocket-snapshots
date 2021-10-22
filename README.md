@@ -29,10 +29,10 @@ Extracts the .tar or .tar.gz on the fly without needing 2x the space
 
 ##### Compressed
 
+
 ```bash
 cd node1/data
-wget -qO- pocket.tar.gz https://link.us1.storjshare.io/s/jw2zfvh5ayoae4g7uxtelozngana/pocket-public-blockchains/pocket-network-data-1422-rc-0.6.3.6.tar xvfz -
-
+wget -qO- pocket.tar.gz https://link.us1.storjshare.io/raw/jwoahm5qim3hmnrsw6phsiga5mfa/pocket-public-blockchains/pocket-network-data-1422-rc-0.6.3.6.tar.gz | tar xvfz -
 ```
 
 #### Tar file
@@ -40,9 +40,7 @@ wget -qO- pocket.tar.gz https://link.us1.storjshare.io/s/jw2zfvh5ayoae4g7uxteloz
 ```bash
 
 cd node1/data
-wget -qO- https://link.us1.storjshare.io/s/jw2zfvh5ayoae4g7uxtelozngana/pocket-public-blockchains/pocket-network-data-1422-rc-0.6.3.6.tar xvfz -
-
-tar xvf pocket.tar -C node1/data 
+wget -qO- pocket.tar.gz https://link.us1.storjshare.io/raw/jw2zfvh5ayoae4g7uxtelozngana/pocket-public-blockchains/pocket-network-data-1422-rc-0.6.3.6.tar | tar xvf -
 
 ```
 
@@ -57,7 +55,7 @@ This methods require 2x of the space required for the blockchain data (approx 10
 
 
 ```bash
-wget -O pocket.tar.gz https://link.us1.storjshare.io/s/jwoahm5qim3hmnrsw6phsiga5mfa/pocket-public-blockchains/pocket-network-data-1422-rc-0.6.3.6.tar.gz
+wget -O pocket.tar.gz https://link.us1.storjshare.io/raw/jwoahm5qim3hmnrsw6phsiga5mfa/pocket-public-blockchains/pocket-network-data-1422-rc-0.6.3.6.tar.gz
 
 tar xvfz pocket.tar.gz -C node1/data
 
@@ -67,7 +65,7 @@ tar xvfz pocket.tar.gz -C node1/data
 
 ```bash
 
-wget -O pocket.tar https://link.us1.storjshare.io/s/jw2zfvh5ayoae4g7uxtelozngana/pocket-public-blockchains/pocket-network-data-1422-rc-0.6.3.6.tar
+wget -O pocket.tar https://link.us1.storjshare.io/raw/jw2zfvh5ayoae4g7uxtelozngana/pocket-public-blockchains/pocket-network-data-1422-rc-0.6.3.6.tar
 
 tar xvf pocket.tar -C node1/data
 
