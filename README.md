@@ -10,18 +10,67 @@ Snapshots for pocket blockchain data
 
 
 ## Overview
-Below are the mechanisms in order to download a snapshot of our datadir using storj 
+Below are the mechanisms in order to download a snapshot of our datadir using storj
 
 ### Usage 
 
 #### Download via direct link
 
-Download snapshot from [this link](https://link.us1.storjshare.io/s/jufhxz4c26qvsbg4d23jyuinhqeq/pocket-public-blockchains/pocket-network-data-1221-rc-0.6.3.6.tar.gz)
 
-Extract snapshot inside pocket network config data folder
+[Compressed]( https://link.us1.storjshare.io/s/jufhxz4c26qvsbg4d23jyuinhqeq/pocket-public-blockchains/pocket-network-data-1221-rc-0.6.3.6.tar.gz )
+
+[Tar]( https://link.us1.storjshare.io/jwaf3ecnydt5u7dm474w2ht2bxhq/pocket-public-blockchains%2Fpocket-network-data-1221-rc-0.6.3.6.tar )
+
+
+#### In-place wget and extract
+
+Extracts the .tar or .tar.gz on the fly without needing 2x the space
+
+
+##### Compressed
 
 ```bash
-tar -xvf ./pocket-network-data-RC-0.6.3.6.tar -C node1/data  # assuming node1/ is your pocket network datadir
+cd node1/data
+wget -qO- pocket.tar.gz https://link.us1.storjshare.io/raw/jufhxz4c26qvsbg4d23jyuinhqeq/pocket-public-blockchains/pocket-network-data-1221-rc-0.6.3.6.tar.gz  | tar xvfz -
+
+```
+
+#### Tar file
+
+```bash
+
+cd node1/data
+wget -qO- https://link.us1.storjshare.io/raw/jwaf3ecnydt5u7dm474w2ht2bxhq/pocket-public-blockchains%2Fpocket-network-data-1221-rc-0.6.3.6.tar  | tar xvfz -
+
+tar xvf pocket.tar -C node1/data 
+
+```
+
+
+#### Download and extracts via wget
+
+
+This methods require 2x of the space required for the blockchain data (approx 105gb for the time of this writting)
+
+
+#### Compressed
+
+
+```bash
+wget -O pocket.tar.gz https://link.us1.storjshare.io/raw/jufhxz4c26qvsbg4d23jyuinhqeq/pocket-public-blockchains/pocket-network-data-1221-rc-0.6.3.6.tar.gz
+
+tar xvfz pocket.tar.gz -C node1/data
+
+```
+
+#### Tar file
+
+```bash
+
+wget -O pocket.tar https://link.us1.storjshare.io/raw/jwaf3ecnydt5u7dm474w2ht2bxhq/pocket-public-blockchains%2Fpocket-network-data-1221-rc-0.6.3.6.tar
+
+tar xvf pocket.tar -C node1/data
+
 ```
 
 #### Download via Rclone 
@@ -29,6 +78,7 @@ tar -xvf ./pocket-network-data-RC-0.6.3.6.tar -C node1/data  # assuming node1/ i
 ##### Script 
 
 Assuming you have rclone installed: 
+
 
 ```bash
 
@@ -39,7 +89,7 @@ time rclone copy --progress --s3-upload-concurrency 32 --s3-chunk-size 256M  dow
 
 mkdir -p node1/data
 
-tar -xvf ./pocket-network-data-RC-0.6.3.6.tar -C node1/data 
+tar -xvf ./pocket-network-data-RC-0.6.3.6.tar -C node1/data
 
 ```
 
@@ -62,4 +112,3 @@ docker build -t pocket-blockchain-downloader . --no-cache && docker run -v  $(pw
 ## License
 
 This project is licensed under the MIT License; see the [LICENSE.md](LICENSE.md) file for details.
-
