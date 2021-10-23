@@ -17,9 +17,9 @@ Below are the mechanisms in order to download a snapshot of our datadir using st
 #### Download via direct link
 
 
-[Compressed]( https://link.us1.storjshare.io/s/jwoahm5qim3hmnrsw6phsiga5mfa/pocket-public-blockchains/pocket-network-data-1422-rc-0.6.3.6.tar.gz )
+[Compressed]( https://link.us1.storjshare.io/raw/jwlqrydkrr6vlh4x6223leinetgq/pocket-public-blockchains/pocket-network-data-0023-rc-0.6.3.6.tar.gz )
 
-[Tar]( https://link.us1.storjshare.io/s/jw2zfvh5ayoae4g7uxtelozngana/pocket-public-blockchains/pocket-network-data-1422-rc-0.6.3.6.tar )
+[Tar]( https://link.us1.storjshare.io/raw/ju35atnokfhef7ntgdwtqntkwd6a/pocket-public-blockchains/pocket-network-data-0023-rc-0.6.3.6.tar )
 
 
 #### In-place wget and extract
@@ -32,7 +32,7 @@ Extracts the .tar or .tar.gz on the fly without needing 2x the space
 
 ```bash
 cd node1/data
-wget -qO- pocket.tar.gz https://link.us1.storjshare.io/raw/jwoahm5qim3hmnrsw6phsiga5mfa/pocket-public-blockchains/pocket-network-data-1422-rc-0.6.3.6.tar.gz | tar xvfz -
+wget -qO- pocket.tar.gz https://link.us1.storjshare.io/raw/ju35atnokfhef7ntgdwtqntkwd6a/pocket-public-blockchains/pocket-network-data-0023-rc-0.6.3.6.tar xvfz -
 ```
 
 #### Tar file
@@ -40,7 +40,7 @@ wget -qO- pocket.tar.gz https://link.us1.storjshare.io/raw/jwoahm5qim3hmnrsw6phs
 ```bash
 
 cd node1/data
-wget -qO- pocket.tar.gz https://link.us1.storjshare.io/raw/jw2zfvh5ayoae4g7uxtelozngana/pocket-public-blockchains/pocket-network-data-1422-rc-0.6.3.6.tar | tar xvf -
+wget -qO- pocket.tar.gz https://link.us1.storjshare.io/raw/ju35atnokfhef7ntgdwtqntkwd6a/pocket-public-blockchains/pocket-network-data-0023-rc-0.6.3.6.tar xvf -
 
 ```
 
@@ -55,7 +55,7 @@ This methods require 2x of the space required for the blockchain data (approx 10
 
 
 ```bash
-wget -O pocket.tar.gz https://link.us1.storjshare.io/raw/jwoahm5qim3hmnrsw6phsiga5mfa/pocket-public-blockchains/pocket-network-data-1422-rc-0.6.3.6.tar.gz
+wget -O pocket.tar.gz https://link.us1.storjshare.io/raw/jwlqrydkrr6vlh4x6223leinetgq/pocket-public-blockchains/pocket-network-data-0023-rc-0.6.3.6.tar.gz
 
 tar xvfz pocket.tar.gz -C node1/data
 
@@ -65,7 +65,7 @@ tar xvfz pocket.tar.gz -C node1/data
 
 ```bash
 
-wget -O pocket.tar https://link.us1.storjshare.io/raw/jw2zfvh5ayoae4g7uxtelozngana/pocket-public-blockchains/pocket-network-data-1422-rc-0.6.3.6.tar
+wget -O pocket.tar https://link.us1.storjshare.io/raw/ju35atnokfhef7ntgdwtqntkwd6a/pocket-public-blockchains/pocket-network-data-0023-rc-0.6.3.6.tar
 
 tar xvf pocket.tar -C node1/data
 
@@ -83,7 +83,7 @@ Assuming you have rclone installed:
 rclone config # Will show the rclone config location. copy the location and replace it with our rclone.config
 cp rclone.config ~/.config/rclone/rclone.conf 
 
-time rclone copy --progress --s3-upload-concurrency 32 --s3-chunk-size 256M  downloader:pocket-public-blockchains/pocket-network-data-1422-rc-0.6.3.6.tar ./
+time rclone copy --progress --s3-upload-concurrency 32 --s3-chunk-size 256M  downloader:pocket-public-blockchains/pocket-network-data-0023-rc-0.6.3.6.tar ./
 
 mkdir -p node1/data
 
