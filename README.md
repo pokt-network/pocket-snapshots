@@ -33,7 +33,7 @@ Extracts the .tar or .tar.gz on the fly without needing 2x the space
 ```bash
 cd node1/data
 
-wget -qO- https://link.us1.storjshare.io/raw/jwi7jxfps4bnzdsqu3yoaszwxdzq/pocket-public-blockchains/pocket-network-data-1223-rc-0.6.3.6.tar xvfz -
+wget -qO- https://link.us1.storjshare.io/raw/jwtxktrh3a4fw3tsup7fzeshlqha/pocket-public-blockchains/pocket-network-data-1223-rc-0.6.3.6.tar.gz | tar xvfz -
 
 ```
 
@@ -43,7 +43,7 @@ wget -qO- https://link.us1.storjshare.io/raw/jwi7jxfps4bnzdsqu3yoaszwxdzq/pocket
 
 cd node1/data
 
-wget -qO- https://link.us1.storjshare.io/raw/jwi7jxfps4bnzdsqu3yoaszwxdzq/pocket-public-blockchains/pocket-network-data-1223-rc-0.6.3.6.tar xvf -
+wget -qO- https://link.us1.storjshare.io/raw/jwi7jxfps4bnzdsqu3yoaszwxdzq/pocket-public-blockchains/pocket-network-data-1223-rc-0.6.3.6.tar | tar xvf -
 
 ```
 
