@@ -32,7 +32,9 @@ Extracts the .tar or .tar.gz on the fly without needing 2x the space
 
 ```bash
 cd node1/data
-wget -qO- pocket.tar.gz https://link.us1.storjshare.io/raw/ju35atnokfhef7ntgdwtqntkwd6a/pocket-public-blockchains/pocket-network-data-0023-rc-0.6.3.6.tar xvfz -
+
+wget -qO- https://link.us1.storjshare.io/raw/jwlqrydkrr6vlh4x6223leinetgq/pocket-public-blockchains/pocket-network-data-0023-rc-0.6.3.6.tar.gz | tar xvfz -
+
 ```
 
 #### Tar file
@@ -40,7 +42,8 @@ wget -qO- pocket.tar.gz https://link.us1.storjshare.io/raw/ju35atnokfhef7ntgdwtq
 ```bash
 
 cd node1/data
-wget -qO- pocket.tar.gz https://link.us1.storjshare.io/raw/ju35atnokfhef7ntgdwtqntkwd6a/pocket-public-blockchains/pocket-network-data-0023-rc-0.6.3.6.tar xvf -
+
+wget -qO- https://link.us1.storjshare.io/raw/ju35atnokfhef7ntgdwtqntkwd6a/pocket-public-blockchains/pocket-network-data-0023-rc-0.6.3.6.tar  | tar xvf -
 
 ```
 
