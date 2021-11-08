@@ -17,9 +17,9 @@ Below are the mechanisms in order to download a snapshot of our datadir using st
 #### Download via direct link
 
 
-[Compressed](https://link.us1.storjshare.io/s/jv4k67c4ufcniec3t6uqmxvxl7ua/pocket-public-blockchains/pocket-public-blockchains/pocket-network-data-0008-rc-0.6.3.6.tar.gz)
+[Compressed](https://link.us1.storjshare.io/raw/jwfop7afgifpxl4ldngwwuqfldea/pocket-public-blockchains/pocket-network-data-0208-rc-0.6.3.6.tar.gz)
 
-[Tar](https://link.us1.storjshare.io/s/jw4zduke7mtkenjwomeqzgonzcma/pocket-public-blockchains/pocket-public-blockchains/pocket-network-data-0008-rc-0.6.3.6.tar)
+[Tar](https://link.us1.storjshare.io/raw/jxp3hp53njrigxwi5hpepms7vgua/pocket-public-blockchains/pocket-network-data-0208-rc-0.6.3.6.tar)
 
 
 #### In-place wget and extract
@@ -33,7 +33,7 @@ Extracts the .tar or .tar.gz on the fly without needing 2x the space
 
 cd node1/data
 
-wget -qO- https://link.us1.storjshare.io/s/jw4zduke7mtkenjwomeqzgonzcma/pocket-public-blockchains/pocket-public-blockchains/pocket-network-data-0008-rc-0.6.3.6.tar | tar xvf -
+wget -qO- https://link.us1.storjshare.io/raw/jxp3hp53njrigxwi5hpepms7vgua/pocket-public-blockchains/pocket-network-data-0208-rc-0.6.3.6.tar xvf -
 
 ```
 
@@ -50,13 +50,13 @@ export UPLINK_DOWN=147A7s3UVY6g4DhxdatsM7QMofNBJJfvcq5w9XuYjU2HrmEbr4JSbRy3NQu3m
 ##### Tar 
  
 ```bash
-uplink --access $UPLINK_DOWN cp sj://pocket-public-blockchains/pocket-network-data-0008-rc-0.6.3.6.tar --parallelism 5 
+uplink --access $UPLINK_DOWN cp sj://pocket-public-blockchains/pocket-network-data-0208-rc-0.6.3.6.tar --parallelism 5 
 ```
 
 ##### Compresssed
  
 ```bash
-uplink --access $UPLINK_DOWN cp sj://pocket-public-blockchains/pocket-network-data-0008-rc-0.6.3.6.tar --parallelism 5
+uplink --access $UPLINK_DOWN cp sj://pocket-public-blockchains/pocket-network-data-0208-rc-0.6.3.6.tar --parallelism 5
 ```
 
 
@@ -69,7 +69,7 @@ This methods require 2x of the space required for the blockchain data (approx 10
 
 ```bash
 
-wget -O https://link.us1.storjshare.io/s/jv4k67c4ufcniec3t6uqmxvxl7ua/pocket-public-blockchains/pocket-public-blockchains/pocket-network-data-0008-rc-0.6.3.6.tar.gz pocket.tar.gz 
+wget -O https://link.us1.storjshare.io/raw/jwfop7afgifpxl4ldngwwuqfldea/pocket-public-blockchains/pocket-network-data-0208-rc-0.6.3.6.tar.gz
 
 tar -zxvf pocket.tar -C node1/data
 
@@ -81,7 +81,7 @@ tar -zxvf pocket.tar -C node1/data
 
 ```bash
 
-wget -O https://link.us1.storjshare.io/s/jw4zduke7mtkenjwomeqzgonzcma/pocket-public-blockchains/pocket-public-blockchains/pocket-network-data-0008-rc-0.6.3.6.tar pocket.tar 
+wget -O https://link.us1.storjshare.io/raw/jxp3hp53njrigxwi5hpepms7vgua/pocket-public-blockchains/pocket-network-data-0208-rc-0.6.3.6.tar
 
 tar xvf pocket.tar -C node1/data
 
@@ -99,7 +99,7 @@ Assuming you have rclone installed:
 rclone config # Will show the rclone config location. copy the location and replace it with our rclone.config
 cp rclone.config ~/.config/rclone/rclone.conf 
 
-time rclone copy --progress --s3-upload-concurrency 32 --s3-chunk-size 256M  downloader:pocket-public-blockchains/pocket-network-data-0008-rc-0.6.3.6.tar ./
+time rclone copy --progress --s3-upload-concurrency 32 --s3-chunk-size 256M  downloader:pocket-public-blockchains/pocket-network-data-0208-rc-0.6.3.6.tar ./
 
 mkdir -p node1/data
 
