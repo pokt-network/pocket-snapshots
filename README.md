@@ -24,7 +24,7 @@ Below are the mechanisms in order to download a snapshot of our datadir using st
 
 #### In-place wget and extract
 
-Extracts the .tar or .tar.gz on the fly without needing 2x the space
+Extracts the .tar on the fly without needing 2x the space
 
 
 #### Tar 
@@ -51,14 +51,16 @@ export UPLINK_DOWN=147A7s3UVY6g4DhxdatsM7QMofNBJJfvcq5w9XuYjU2HrmEbr4JSbRy3NQu3m
  
 ```bash
 uplink --access $UPLINK_DOWN cp sj://pocket-public-blockchains/pocket-network-data-0508-rc-0.6.3.6.tar ./pocket.tar --parallelism 5
- tar -xvf pocket.tar -C node1/data
+
+tar xvf pocket.tar -C node1/data
 ```
 
 ##### Compresssed
  
 ```bash
 uplink --access $UPLINK_DOWN cp sj://pocket-public-blockchains/pocket-network-data-0508-rc-0.6.3.6.tar.gz ./pocket.tar.gz --parallelism 5
-tar -zxvf pocket.tar -C node1/data
+
+tar zxvf pocket.tar.gz -C node1/data
 ```
 
 
@@ -103,8 +105,7 @@ cp rclone.config ~/.config/rclone/rclone.conf
 time rclone copy --progress --s3-upload-concurrency 32 --s3-chunk-size 256M  downloader:pocket-public-blockchains/pocket-network-data-0508-rc-0.6.3.6.tar ./
 
 mkdir -p node1/data
-
-tar -xvf ./pocket-network-data-RC-0.6.3.6.tar -C node1/data
+tar xvf ./pocket-network-data-RC-0.6.3.6.tar -C node1/data
 
 ```
 
