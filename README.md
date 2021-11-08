@@ -71,9 +71,9 @@ This methods require 2x of the space required for the blockchain data (approx 10
 
 ```bash
 
-wget -O https://link.us1.storjshare.io/s/jvjzqpvl6zh67wchkx64msj3fneq/pocket-public-blockchains/pocket-network-data-0208-rc-0.6.3.6.tar.gz 
+wget -O pocket.tar.gz https://link.us1.storjshare.io/s/jvjzqpvl6zh67wchkx64msj3fneq/pocket-public-blockchains/pocket-network-data-0208-rc-0.6.3.6.tar.gz 
 
-tar -zxvf pocket.tar -C node1/data
+tar zxvf pocket.tar -C node1/data
 
 ```
 
@@ -82,7 +82,7 @@ tar -zxvf pocket.tar -C node1/data
 
 ```bash
 
-wget -O https://link.us1.storjshare.io/raw/jxp3hp53njrigxwi5hpepms7vgua/pocket-public-blockchains/pocket-network-data-0208-rc-0.6.3.6.tar 
+wget -O pocket.tar https://link.us1.storjshare.io/raw/jxp3hp53njrigxwi5hpepms7vgua/pocket-public-blockchains/pocket-network-data-0208-rc-0.6.3.6.tar 
 
 tar xvf pocket.tar -C node1/data
 
