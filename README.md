@@ -10,7 +10,13 @@ Snapshots for pocket blockchain data
 
 
 ## Overview
+
+This snapshots take places every 12 hours and current name format for them is `pocket-network-data-hhdd-rc-x.x.x.x` for both .tar and .tar.gz respectively
+
+Also, every 12 hours all of our example and download links gets updated via a script so you always get the latest one. If for any reason the latest doesn't work. you can feel free to take a old snapshot from the commit history
+
 Below are the mechanisms in order to download a snapshot of our datadir using storj
+
 
 ### Usage 
 
