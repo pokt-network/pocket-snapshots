@@ -50,13 +50,13 @@ export UPLINK_DOWN=147A7s3UVY6g4DhxdatsM7QMofNBJJfvcq5w9XuYjU2HrmEbr4JSbRy3NQu3m
 ##### Tar 
  
 ```bash
-uplink --access $UPLINK_DOWN cp sj://pocket-public-blockchains/pocket-network-data-1207-rc-0.6.3.6.tar ./pocket.tar --paralellism 5
+uplink --access $UPLINK_DOWN cp sj://pocket-public-blockchains/pocket-network-data-1207-rc-0.6.3.6.tar ./pocket.tar --parallelism 5 
 ```
 
 ##### Compresssed
  
 ```bash
-uplink --access $UPLINK_DOWN cp sj://pocket-public-blockchains/pocket-network-data-1207-rc-0.6.3.6.tar ./pocket.tar --paralellism 5
+uplink --access $UPLINK_DOWN cp sj://pocket-public-blockchains/pocket-network-data-1207-rc-0.6.3.6.tar ./pocket.tar --parallelism 5
 ```
 
 
