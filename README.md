@@ -27,24 +27,36 @@ Below are the mechanisms in order to download a snapshot of our datadir using st
 Extracts the .tar or .tar.gz on the fly without needing 2x the space
 
 
-##### Compressed
-
+#### Tar 
 
 ```bash
+
 cd node1/data
 
-wget -qO- https://link.us1.storjshare.io/raw/jx7vagk3iswgq355odkms4sgmypq/pocket-public-blockchains/pocket-network-data-1207-rc-0.6.3.6.tar xvfz -
+wget -qO- https://link.us1.storjshare.io/raw/jx7vagk3iswgq355odkms4sgmypq/pocket-public-blockchains/pocket-network-data-1207-rc-0.6.3.6.tar | tar xvf -
 
 ```
 
-#### Tar file
+#### Download and extract via uplink
+
+This method requires 2x of the space required for the blockchain data. But it's the most fastest download method
+
+We assume you have downloaded uplink and that you exported the env variable below:
 
 ```bash
+export UPLINK_DOWN=147A7s3UVY6g4DhxdatsM7QMofNBJJfvcq5w9XuYjU2HrmEbr4JSbRy3NQu3mijqk7T8in1PYEAdcf11dd5yhJ4eDAn4UMppBgqcN49f2tHVcGhRV2McpvyTm4U22uXH35h14JA1YXiGdUFDss7ThTnFnPYY8uRTxmtG2UrdW9LZkmuJysNF1sU8anEGcZnGQuYWViAzVx2VwtYTrYQE5CXPQotB2rnGwFaUY9vVeTCKFC8yiwZLHxhPJdZaexrZPbBTaf1xvmuyarMchkxvbn8K7pLXfw7n2xGArJavvRK86Nj1SrRr5ws9ku9i24WbGddKWz4SNaZgUH63Wm65yK8m91kgeHLDhhhR
+```
 
-cd node1/data
+##### Tar 
+ 
+```bash
+uplink --access $UPLINK_DOWN cp sj://pocket-public-blockchains/pocket-network-data-1207-rc-0.6.3.6.tar ./pocket.tar --paralellism 5
+```
 
-wget -qO- https://link.us1.storjshare.io/raw/jx7vagk3iswgq355odkms4sgmypq/pocket-public-blockchains/pocket-network-data-1207-rc-0.6.3.6.tar xvf -
-
+##### Compresssed
+ 
+```bash
+uplink --access $UPLINK_DOWN cp sj://pocket-public-blockchains/pocket-network-data-1207-rc-0.6.3.6.tar ./pocket.tar --paralellism 5
 ```
 
 
