@@ -23,9 +23,10 @@ Below are the mechanisms in order to download a snapshot of our datadir using st
 #### Download via direct link
 
 
-[Compressed](https://link.us1.storjshare.io/raw/jxamw4552fu44l5xt7h62zka6tsa/pocket-public-blockchains/pocket-network-data-0809-rc-0.6.3.6.tar.gz)
+[Compressed](https://link.us1.storjshare.io/raw/jw4z45cd3hwcthqssrs34gmwviwa/pocket-public-blockchains/pocket-network-data-0809-rc-0.6.3.6.tar.gz)
 
 [Tar](https://link.us1.storjshare.io/raw/jxamw4552fu44l5xt7h62zka6tsa/pocket-public-blockchains/pocket-network-data-0809-rc-0.6.3.6.tar)
+
 
 
 #### In-place wget and extract
@@ -79,7 +80,7 @@ This methods require 2x of the space required for the blockchain data (approx 10
 
 ```bash
 
-wget -O pocket.tar.gz https://link.us1.storjshare.io/raw/jxamw4552fu44l5xt7h62zka6tsa/pocket-public-blockchains/pocket-network-data-0809-rc-0.6.3.6.tar.gz
+wget -O pocket.tar.gz https://link.us1.storjshare.io/raw/jw4z45cd3hwcthqssrs34gmwviwa/pocket-public-blockchains/pocket-network-data-0809-rc-0.6.3.6.tar.gz
 
 tar zxvf pocket.tar -C node1/data
 
