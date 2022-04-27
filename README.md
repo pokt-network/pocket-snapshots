@@ -5,7 +5,15 @@
   </a>
 </div>
 
-# Pocket blockchain snapshots 
+
+---
+
+### Please note that this repository has been deprecated and snapshots should be obtained from [pocket-snapshotter](https://github.com/pokt-foundation/pocket-snapshotter)
+
+---
+
+
+# Pocket blockchain snapshots
 Snapshots for pocket blockchain data
 
 
